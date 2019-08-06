@@ -2,46 +2,45 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from random import randint, choice
 
 
-# 随机ASCII码生成数字或大小写字母
 def rnd_char():
+    """get random digits, alphabets"""
     return chr(choice([randint(48, 57), randint(65, 90), randint(97, 122)]))
 
 
-# 背景颜色
 def rnd_color():
+    """get random color"""
     return randint(64, 255), randint(64, 255), randint(64, 255)
 
 
-# 验证码颜色
 def ran_color2():
+    """get random color"""
     return randint(32, 127), randint(32, 127), randint(32, 127)
 
 
-class CheckCode:
+class CheckCode(object):
 
-    # 生成验证码图片
     @staticmethod
-    def getCheckCodePict():
-        num = 5  # 生成num位的验证码
-        width = 50 * num  # 图宽
-        height = 60  # 图高
+    def get_check_code_pict():
+        num = 5  # number of check code
+        width = 50 * num  # width of image
+        height = 60  # height of image
         image = Image.new('RGB', (width, height), (255, 255, 255))
 
-        # 创建Font对象 .tff为字体文件 可自定义
+        # set Font instance, .tff is font file, can switch it
         font = ImageFont.truetype('arial.ttf', 50)
-        # 创建Draw对象
+        # set Draw instance
         draw = ImageDraw.Draw(image)
-        # 填充每个像素
+        # pad every pixels
         for x in range(width):
             for y in range(height):
                 draw.point((x, y), fill=rnd_color())
-        # 生成验证码
+        # generate code
         code = ""
         for k in range(num):
             temp = rnd_char()
             draw.text((50 * k + randint(1, 10), randint(0, 5)), temp, font=font, fill=ran_color2())
             code += temp
-        # 对图片进行模糊处理
+        # blur the image
         image = image.filter(ImageFilter.GaussianBlur)
 
         return image, code
