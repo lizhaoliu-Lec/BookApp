@@ -1,3 +1,10 @@
 # filter ide profile
 .idea/
 .vscode/
+
+# ignore migration file
+migrations/
+
+# ignore database
+db.sqlite3
+

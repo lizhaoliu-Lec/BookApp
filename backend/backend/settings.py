@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,11 +35,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'apps.user',
+    'apps.bookstore',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # added for corsheaders visit
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -69,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -79,7 +81,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -99,7 +100,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -113,8 +113,42 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+    # Authentication classes
+    'DEFAULT_AUTHENTICATION_CLASSES': ["apps.user.utils.auth.Authentication", ],
+    'UNAUTHENTICATED_USER': None,  # 匿名用户时，request.user=None
+    'UNAUTHENTICATED_TOKEN': None,  # 匿名用户时，request.auth=None
+    # # 权限
+    # 'DEFAULT_PERMISSION_CLASSES': [],
+    # # 节流
+    # 'DEFAULT_THROTTLE_CLASSES': ["apps.security_system.utils.throttle.VisitThrottle", ],
+    # 'DEFAULT_THROTTLE_RATES': {
+    #     'simpleRate': '10/m',
+    # },
+    # # 版本
+    # 'DEFAULT_VERSIONING_CLASS': "rest_framework.versioning.URLPathVersioning",
+    # 'DEFAULT_VERSION': "v1",
+    # 'ALLOWED_VERSIONS': ['v1', 'v2', 'v3'],
+    # 'VERSION_PARAM': 'version',
+    # # 解析器
+    # 'DEFAULT_PARSER_CLASSES': ['rest_framework.parsers.JSONParser', 'rest_framework.parsers.FormParser','rest_framework.parsers.MultiPartParser',],
+    # # 分页
+    # 'PAGE_SIZE': 2,
+    # # 渲染
+    # 'DEFAULT_RENDERER_CLASSES': [
+    #     'rest_framework.renderers.JSONRenderer',
+    #     'rest_framework.renderers.BrowsableAPIRenderer'
+    # ]
+}
+
+# 跨域增加忽略
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
