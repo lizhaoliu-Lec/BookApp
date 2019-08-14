@@ -13,20 +13,21 @@ class TimingRecord(models.Model):
         (2, '睡觉打卡'),
     )
 
-    record_id = models.AutoField(primary_key=True)
-    user = models.OneToOneField(User, on_delete=None)
-    time = models.IntegerField()
+    user = models.ForeignKey(User, on_delete=None)
+    time = models.IntegerField(null=True, blank=True)
     remark = models.CharField(max_length=200)
     type = models.IntegerField(choices=TIMING_TYPE)
     start_time = models.DateTimeField()
-    end_time = models.DateTimeField(null=True)
+    end_time = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return '%s-%s-%s' % (self.user, self.remark, self.time)
 
 
 class TimingGroup(models.Model):
     class Meta:
         db_table = 'timing_group'
 
-    group_id = models.AutoField(primary_key=True)
     description = models.CharField(max_length=200, null=True, blank=True)
     user = models.ManyToManyField(User, )
 
@@ -35,6 +36,5 @@ class TimingPlan(models.Model):
     class Meta:
         db_table = 'timing_plan'
 
-    plan_id = models.AutoField(primary_key=True)
-    user = models.OneToOneField(User, on_delete=None, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=None, null=True, blank=True)
     description = models.CharField(max_length=200, null=True, blank=True)

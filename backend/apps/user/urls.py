@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import re_path
 from . import views
 
 urlpatterns = [
-    url(r'^api/v1/auth/$', views.AuthView.as_view(), name='auth'),
-    url(r'^api/v1/register/$', views.RegisterView.as_view(), name='register'),
+    re_path(r'^api/v1/auth/$', views.AuthView.as_view(), name='auth'),
+    # re_path(r'^api/v1/register/$', views.RegisterView.as_view(), name='register'),
 ]
