@@ -2,6 +2,9 @@
 
 Software training.
 
+# Database design.
+![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+
 ## Getting Started
 
 - Frontend part
@@ -54,14 +57,6 @@ Software training.
     - ❌ define some models.  
     - ❌ write some apis.
     - ❌ ...
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system.
-
-```
-Long way to gooooooo...
-```
 
 ## Built With
 
