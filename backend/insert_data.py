@@ -3,7 +3,6 @@ import random
 import django
 
 from django.utils import timezone as datetime
-import pytz
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings")
 
@@ -14,13 +13,32 @@ from apps.timing import models
 
 
 def insert():
+    names = [
+        '七喜先生',
+        '全幼儿园最可爱',
+        '诸多诱惑',
+        '叼辣条闯世界',
+        '李拔皮',
+        '纯味野猫',
+        '一懒众山小.',
+        '孤独患者',
+        '汤圆.',
+        '拿着试卷唱忐忑',
+        '同学，你狠屌？',
+        '玩贴吧的好菇凉',
+        '青春期躁动症',
+        '本人已死, 有事烧纸',
+        '吐舌奶包吴市长'
+        '丑到未知丑',
+        '我已长发及屁股',
+    ]
     users = [
-        {'account': '1234567', 'password': '1234567', 'name': '哈哈哈'},
-        {'account': '098765', 'password': '098765', 'name': '嘻嘻嘻'},
-        {'account': '147qwe', 'password': '147qwe', 'name': '猜猜我是谁'},
-        {'account': '78654ghj', 'password': '78654ghj', 'name': '我不知道你是谁'},
-        {'account': '99999999', 'password': '99999999', 'name': '好吧'},
-        {'account': '6666666666', 'password': '6666666666', 'name': '自闭辽'},
+        {'account': '1234567', 'password': '1234567', 'name': names[random.randint(0, len(names) - 1)]},
+        {'account': '098765', 'password': '098765', 'name': names[random.randint(0, len(names) - 1)]},
+        {'account': '147qwe', 'password': '147qwe', 'name': names[random.randint(0, len(names) - 1)]},
+        {'account': '78654ghj', 'password': '78654ghj', 'name': names[random.randint(0, len(names) - 1)]},
+        {'account': '99999999', 'password': '99999999', 'name': names[random.randint(0, len(names) - 1)]},
+        {'account': '6666666666', 'password': '6666666666', 'name': names[random.randint(0, len(names) - 1)]},
     ]
 
     remarks = [
