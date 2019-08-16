@@ -3,7 +3,7 @@
 Software training.
 
 # Database design.
-![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)
+![image](https://github.com/lizhaoliu-Lec/OneApp/blob/master/assets/database_design.png)
 
 ## Getting Started
 
