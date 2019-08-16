@@ -206,8 +206,8 @@ class TimingGroupView(APIView):
             timing_groups = TimingGroup.objects.filter(user=user)
             timing_groups = TimingGroupSerializer(instance=timing_groups, many=True)
             ret.update({
-                'code': code.TIMING_PLAN_GET_SUCCESS,
-                'msg': msg.TIMING_PLAN_GET_SUCCESS,
+                'code': code.TIMING_GROUP_GET_SUCCESS,
+                'msg': msg.TIMING_GROUP_GET_SUCCESS,
                 'data': timing_groups.data,
             })
 
@@ -216,8 +216,8 @@ class TimingGroupView(APIView):
         except Exception as e:
             print('exception occurs at getting TimingPlanView' + '*** %s ***' % str(type(e)))
             ret.update({
-                'code': code.TIMING_PLAN_GET_FAIL,
-                'msg': msg.TIMING_PLAN_GET_FAIL,
+                'code': code.TIMING_GROUP_GET_FAIL,
+                'msg': msg.TIMING_GROUP_GET_FAIL,
             })
             return Response(data=ret,
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
