@@ -20,6 +20,11 @@ Software training.
     pip install -r requirements.txt
     ```
     ```
+    python manage.py makemigrations
+    python manage.py migrate
+    python insert_data.py # insert some data
+    ```
+    ```
     python manage.py runserver
     ```
 
@@ -31,6 +36,10 @@ Software training.
     - ✅ User register and authentication.
     - ✅ Create user model.
     - ✅ User web API.
+    - ✅ Timing record, plan, group.
+    - ✅ Create user Timing record, plan, group.
+    - ✅ Timing record, plan, group web API.
+
 
 
 ### TODO
