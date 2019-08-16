@@ -25,6 +25,9 @@ Software training.
     python insert_data.py # insert some data
     ```
     ```
+    inserted user account can be found at main_user.html
+    ```
+    ```
     python manage.py runserver
     ```
 
