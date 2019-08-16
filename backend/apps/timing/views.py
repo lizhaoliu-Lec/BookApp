@@ -222,42 +222,9 @@ class TimingGroupView(APIView):
             return Response(data=ret,
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def post(self, *args, **kwargs):
+    @staticmethod
+    def post(*args, **kwargs):
         ret = dict(code=code.TIMING_RECORD_POST_FAIL,
                    msg=msg.TIMING_RECORD_POST_FAIL)
-        try:
-            user = self.request.user
-
-            description = self.request.POST.get('description', None)
-
-            if not user and description:
-                print('user and description must provided.')
-                ret.update({
-                    'code': code.TIMING_RECORD_POST_FAIL,
-                    'msg': msg.TIMING_RECORD_POST_FAIL,
-                })
-                return Response(data=ret,
-                                status=status.HTTP_200_OK)
-
-            timing_plan = TimingPlan(user=user,
-                                     description=description)
-            timing_plan.save()
-
-            ret.update({
-                'code': code.TIMING_PLAN_POST_SUCCESS,
-                'msg': msg.TIMING_PLAN_POST_SUCCESS,
-                'user': user.name,
-                'description': description
-            })
-
-            return Response(data=ret,
-                            status=status.HTTP_200_OK)
-
-        except Exception as e:
-            ret.update({
-                'code': code.TIMING_RECORD_POST_FAIL,
-                'msg': msg.TIMING_RECORD_POST_FAIL,
-            })
-            print('exception occurs at posting TimingRecordView' + '*** %s ***' % str(type(e)))
-            return Response(data=ret,
-                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response(data=ret,
+                        status=status.HTTP_500_INTERNAL_SERVER_ERROR)
