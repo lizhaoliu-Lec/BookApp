@@ -9,6 +9,7 @@ class User(models.Model):
     password = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
     created_datetime = models.DateTimeField(auto_now=True)
+    modified_datetime = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
         return "%s-%s-%s" % (self.name, self.account, self.password)
