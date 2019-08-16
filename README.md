@@ -30,6 +30,14 @@ Software training.
     ```
     inserted user account can be found at main_user.html
     ```
+    <table border="1" style="border-collapse:collapse">
+    <tr><th>account</th><th>password</th><th>name</th><th>created_datetime</th><th>modified_datetime</th></tr>
+    <tr><td>1234567</td><td>1234567</td><td>诸多诱惑</td><td>2019-08-16 14:10:57.908962</td><td>NULL</td></tr>
+    <tr><td>098765</td><td>098765</td><td>同学，你狠屌？</td><td>2019-08-16 14:10:57.960825</td><td>NULL</td></tr>
+    <tr><td>147qwe</td><td>147qwe</td><td>汤圆.</td><td>2019-08-16 14:10:58.011724</td><td>NULL</td></tr>
+    <tr><td>78654ghj</td><td>78654ghj</td><td>七喜先生</td><td>2019-08-16 14:10:58.073522</td><td>NULL</td></tr>
+    <tr><td>99999999</td><td>99999999</td><td>同学，你狠屌？</td><td>2019-08-16 14:10:58.142339</td><td>NULL</td></tr>
+    <tr><td>6666666666</td><td>6666666666</td><td>全幼儿园最可爱</td><td>2019-08-16 14:10:58.222123</td><td>NULL</td></tr></table>
     ```
     python manage.py runserver
     ```
