@@ -1,5 +1,6 @@
 # filter ide profile
 .idea/
+.git/
 .vscode/
 
 # ignore migration file
