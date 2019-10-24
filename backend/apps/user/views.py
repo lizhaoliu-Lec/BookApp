@@ -45,6 +45,7 @@ class AuthView(APIView):
                     'account': user.account,
                     'password': user.password,
                     'name': user.name,
+                    'signature': user.signature
                 })
 
                 return Response(ret, status.HTTP_200_OK)
@@ -68,8 +69,9 @@ class RegisterView(APIView):
             account = request.POST.get("account", None)
             password = request.POST.get("password", None)
             name = request.POST.get("name", None)
+            signature = request.POST.get("signature", None)
             try:
-                models.User.objects.get(pk=account)
+                models.User.objects.get(account=account, password=password, name=name, signature=signature)
                 ret.update({
                     'code': code.REGISTER_FAIL,
                     'msg': msg.REGISTER_USER_EXISTS,
@@ -81,6 +83,7 @@ class RegisterView(APIView):
                 new_user.account = account
                 new_user.password = password
                 new_user.name = name
+                new_user.signature = signature
                 new_user.save()
 
                 ret.update({
@@ -89,6 +92,7 @@ class RegisterView(APIView):
                     'account': account,
                     'password': password,
                     'name': name,
+                    'signature': signature
                 })
                 return Response(ret, status.HTTP_200_OK)
 

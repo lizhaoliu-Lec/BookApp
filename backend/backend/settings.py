@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.user',
     'apps.timing',
+    'apps.todo',
+    'apps.clock',
+    'apps.todoSet'
 ]
 
 MIDDLEWARE = [
