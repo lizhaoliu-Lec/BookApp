@@ -4,6 +4,6 @@ from ..todoSet.models import TodoSet
 
 class TodoSetSerializer(ModelSerializer):
     class Meta:
-        models = TodoSet
+        model = TodoSet
         fields = "__all__"
 

@@ -22,5 +22,5 @@ urlpatterns = [
     re_path('^', include('apps.timing.urls')),
     re_path('^', include('apps.todo.urls')),
     re_path('^', include('apps.todoSet.urls')),
-    re_path('^', include('apps.clock.urls'))
+    # re_path('^', include('apps.clock.urls'))
 ]
