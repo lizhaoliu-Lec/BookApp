@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'apps.timing',
     'apps.todo',
     'apps.clock',
-    'apps.todoSet'
+    'apps.todoSet',
+    'apps.remain'
 ]
 
 MIDDLEWARE = [
