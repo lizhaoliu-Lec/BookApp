@@ -17,13 +17,13 @@ class Todo(models.Model):
     )
 
     name = models.CharField(max_length=50)
-    attendTimes = models.PositiveIntegerField()
-    quitTimes = models.PositiveIntegerField()
-    totalTime = models.PositiveIntegerField()
-    deadline = models.DateTimeField(auto_now=True)
+    attendTimes = models.PositiveIntegerField(default=0)
+    quitTimes = models.PositiveIntegerField(default=0)
+    totalTime = models.PositiveIntegerField(default=0)
+    expectedTime = models.PositiveIntegerField(default=25)
     type = models.IntegerField(choices=CLOCK_TYPE)
-    loopMode = models.IntegerField(choices=LOOP_MODE)
-    expectedTime = models.PositiveIntegerField()
+    deadline = models.DateTimeField(auto_now=True, null=True)
+    loopMode = models.IntegerField(choices=LOOP_MODE, null=True)
     belongTodoSet = models.ForeignKey(TodoSet, on_delete=models.CASCADE, related_name="belongTodoSet")
 
     class Meta:
