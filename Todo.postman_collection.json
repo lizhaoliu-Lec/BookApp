@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "93f705a8-0a81-4e75-b270-d0a45e0a0df8",
+		"name": "Todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/v1/register/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "account",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "立刻走",
+							"type": "text"
+						},
+						{
+							"key": "signature",
+							"value": "学习狂",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/auth/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "account",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "立刻走",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/auth/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todoSet/?token=db581da6adcc74b6cc2cb3ef855dceb3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "机器学习",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todoSet/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todoSet",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "2dbe6e142d3c5c22f084bbd789e8f8c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todoSet/?token=db581da6adcc74b6cc2cb3ef855dceb3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todoSet/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todoSet",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "2dbe6e142d3c5c22f084bbd789e8f8c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todoSet/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "机器学习",
+							"type": "text"
+						},
+						{
+							"key": "todoSetID",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todoSet/1/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todoSet",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "2dbe6e142d3c5c22f084bbd789e8f8c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todoSet/1/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "todoSetName",
+							"value": "软件",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todoSet/?token=b00d7e65099fe10fd8b22c8aed1497fc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todoSet",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b00d7e65099fe10fd8b22c8aed1497fc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todo/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name ",
+							"value": "人工智能",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "todoSetName",
+							"value": "广度学习",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "人工智能",
+							"type": "text"
+						},
+						{
+							"key": "expectedTime",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "loopMode",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todo/?token=b00d7e65099fe10fd8b22c8aed1497fc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b00d7e65099fe10fd8b22c8aed1497fc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todo/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "todoSetName",
+							"value": "迁移学习",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todo/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "2dbe6e142d3c5c22f084bbd789e8f8c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todo/2/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "deadline",
+							"value": "2019-01-01",
+							"type": "text"
+						},
+						{
+							"key": "expectedTime",
+							"value": "60",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "loopMode",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "oldTodoName",
+							"value": "人工智能",
+							"type": "text"
+						},
+						{
+							"key": "oldTodoSetName",
+							"value": "广度学习",
+							"type": "text"
+						},
+						{
+							"key": "newTodoName",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "newTodoSetName",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todo/?token=b00d7e65099fe10fd8b22c8aed1497fc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b00d7e65099fe10fd8b22c8aed1497fc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/todo/2/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/todo/2/?token=2dbe6e142d3c5c22f084bbd789e8f8c0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "2dbe6e142d3c5c22f084bbd789e8f8c0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
