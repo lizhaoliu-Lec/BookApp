@@ -1,0 +1,13 @@
+# create clock
+CLOCK_POST_SUCCESS = 39
+CLOCK_POST_FAIL = 40
+CLOCK_POST_NO_CONDITION = 41
+CLOCK_POST_NO_TODO_SET = 42
+CLOCK_POST_NO_TODO = 43
+CLOCK_POST_EXITED_CLOCK = 44
+
+# get clock
+
+# update clock
+
+# delete clock
