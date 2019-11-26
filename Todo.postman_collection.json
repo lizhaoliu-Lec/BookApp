@@ -538,6 +538,354 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"clock",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "f3555d4e58db8489b02b0c70dc2e82e7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"clock",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "f3555d4e58db8489b02b0c70dc2e82e7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"clock",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "f3555d4e58db8489b02b0c70dc2e82e7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/clock/?token=f3555d4e58db8489b02b0c70dc2e82e7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"clock",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "f3555d4e58db8489b02b0c70dc2e82e7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/clockIn/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "type",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "punchTime",
+							"value": "2019-11-26 20:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/clockIn/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"clockIn",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "e6346e2af390ab4aa5e1c7fbf7f39de1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/clockIn/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "type",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "punchTime",
+							"value": "2019-11-26 20:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/clockIn/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"clockIn",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "e6346e2af390ab4aa5e1c7fbf7f39de1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/remain/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "detail",
+							"value": "好好学习",
+							"type": "text"
+						},
+						{
+							"key": "timeToRemind",
+							"value": "2019-11-26 20:00:00",
+							"type": "text"
+						},
+						{
+							"key": "repeatDay",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/remain/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"remain",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "e6346e2af390ab4aa5e1c7fbf7f39de1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/remain/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "detail",
+							"value": "好好学习",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/remain/?token=e6346e2af390ab4aa5e1c7fbf7f39de1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"remain",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "e6346e2af390ab4aa5e1c7fbf7f39de1"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}

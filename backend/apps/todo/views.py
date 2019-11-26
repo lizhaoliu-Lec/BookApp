@@ -32,7 +32,7 @@ class TodoView(ModelViewSet):
             )
             return Response(ret, HTTP_204_NO_CONTENT)
         # 2. check if there is todo_set_name
-        elif todo_set_name is None:
+        if todo_set_name is None:
             ret.update(
                 code=code.TODO_POST_NO_TODO_SET_NAME,
                 msg=msg.TODO_POST_NO_TODO_SET_NAME
@@ -166,7 +166,7 @@ class TodoView(ModelViewSet):
 
         # 1. check if there is todoName and todoSetName
         todoName = request.data.get("oldTodoName", None)
-        todoSetName = request.data.get("oldTodoSetName", None)
+        todoSetName = request.data.get("todoSetName", None)
         if todoName is None or todoSetName is None:
             ret.update(
                 code=code.TODO_UPDATE_NO_CONDITION,

@@ -10,7 +10,7 @@ from rest_framework.status import HTTP_204_NO_CONTENT, HTTP_200_OK, HTTP_500_INT
 
 
 # Create your views here.
-class Clock(ModelViewSet):
+class ClockView(ModelViewSet):
     model = Clock
     serializer_class = ClockSerializer
 
@@ -30,7 +30,7 @@ class Clock(ModelViewSet):
         if todoSetName and todoName and isCompleted and endTime and startTime:
             # 2. check if there is todoSet object
             use_id = get_user(request)
-            todo_set_obj = TodoSet.objects.filter(name=todoSetName, belongUser_id=use_id)
+            todo_set_obj = TodoSet.objects.filter(name=todoSetName, belongUser_id=use_id).first()
             if not todo_set_obj:
                 ret.update(
                     code=code.CLOCK_POST_NO_TODO_SET,
@@ -38,7 +38,7 @@ class Clock(ModelViewSet):
                 )
                 return Response(ret, HTTP_204_NO_CONTENT)
             else:
-                todo_obj = Todo.objects.filter(name=todoName, belongTodoSet=todo_set_obj)
+                todo_obj = Todo.objects.filter(name=todoName, belongTodoSet=todo_set_obj).first()
                 if not todo_obj:
                     ret.update(
                         code=code.CLOCK_POST_NO_TODO,
@@ -46,8 +46,10 @@ class Clock(ModelViewSet):
                     )
                     return Response(ret, HTTP_204_NO_CONTENT)
                 else:
+                    print(startTime)
+                    print(endTime)
                     clock_obj = Clock.objects.filter(startTime=startTime, endTime=endTime, isCompleted=isCompleted,
-                                                     reason=reason, belongTodo=todo_obj)
+                                                     reason=reason, belongTodo=todo_obj).first()
                     if not clock_obj:
                         clock_obj = Clock(startTime=startTime, endTime=endTime, isCompleted=isCompleted,
                                           reason=reason, belongTodo=todo_obj)
@@ -68,15 +70,3 @@ class Clock(ModelViewSet):
                 msg=msg.CLOCK_POST_NO_CONDITION
             )
             return Response(ret, HTTP_204_NO_CONTENT)
-
-    def list(self, request, *args, **kwargs):
-
-        return 0
-
-    def partial_update(self, request, *args, **kwargs):
-
-        return 0
-
-    def destroy(self, request, *args, **kwargs):
-
-        return 0

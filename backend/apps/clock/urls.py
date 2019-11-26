@@ -1,7 +1,7 @@
 from django.urls import path
-from ..todo.views import TodoView
+from ..clock.views import ClockView
 
 urlpatterns = [
-    path('api/v1/clock/', TodoView.as_view({'get': 'list', 'post': 'create',
-                                           'put': "partial_update", "delete": "destroy"}))
+    path('api/v1/clock/', ClockView.as_view({'get': 'list', 'post': 'create',
+                                             'put': "partial_update", "delete": "destroy"}))
 ]

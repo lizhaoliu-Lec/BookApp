@@ -19,8 +19,9 @@ from django.urls import path, re_path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('^', include('apps.user.urls')),
-    re_path('^', include('apps.timing.urls')),
     re_path('^', include('apps.todo.urls')),
     re_path('^', include('apps.todoSet.urls')),
-    # re_path('^', include('apps.clock.urls'))
+    re_path('^', include('apps.clock.urls')),
+    re_path('^', include('apps.clockIn.urls')),
+    re_path('^', include('apps.remain.urls'))
 ]

@@ -22,7 +22,7 @@ class Todo(models.Model):
     totalTime = models.PositiveIntegerField(default=0)
     expectedTime = models.PositiveIntegerField(default=25)
     type = models.IntegerField(choices=CLOCK_TYPE)
-    deadline = models.DateTimeField(auto_now=True, null=True)
+    deadline = models.DateTimeField(auto_now_add=True, null=True)
     loopMode = models.IntegerField(choices=LOOP_MODE, null=True, default=0)
     belongTodoSet = models.ForeignKey(TodoSet, on_delete=models.CASCADE, related_name="belongTodoSet")
 
